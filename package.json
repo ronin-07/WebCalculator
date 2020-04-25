@@ -1,0 +1,24 @@
+{
+  "name": "web_calc",
+  "version": "1.0.0",
+  "description": "A simple web calculator",
+  "main": "sever.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronin-07/WebCalculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronin-07/WebCalculator/issues"
+  },
+  "homepage": "https://github.com/ronin-07/WebCalculator#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
