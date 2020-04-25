@@ -1,0 +1,35 @@
+body{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.calc{
+  text-align: center;
+  margin: auto;
+  height: 500px;
+  width: 540px;
+  background-color: black;
+}
+
+textarea{
+  background-color: #09335c;
+  resize: vertical;
+  font-size: 30px;
+  margin: 10px auto 100px;
+  padding: 0;
+  width: 490px;
+  height: 80px;
+}
+
+.buttons{
+  font-weight: bold;
+  background-color: grey;
+  font-size: 20px;
+  width: 70px;
+  height: 40px;
+  margin: 10px 5px;
+}
+
+.equal{
+  width: 154px;
+}
