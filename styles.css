@@ -1,35 +1,75 @@
-body{
+body {
+  background-color: #035aa6;
+  color: #120136;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, Helvetica, sans-serif
 }
 
-.calc{
-  text-align: center;
-  margin: auto;
+.main {
   height: 500px;
-  width: 540px;
+  width: 380px;
   background-color: black;
+  margin: auto;
+  padding-top: 5px;
 }
 
-textarea{
-  background-color: #09335c;
-  resize: vertical;
-  font-size: 30px;
-  margin: 10px auto 100px;
+.inp_text {
+  background-color: #40bad5;
+  width: 350px;
   padding: 0;
-  width: 490px;
+  margin: 10px auto 10px;
   height: 80px;
+  font-size: 30px;
+  text-align: right;
+  border: 4px;
+  border-style: outset;
 }
 
-.buttons{
-  font-weight: bold;
-  background-color: grey;
-  font-size: 20px;
-  width: 70px;
+.history{
+  background-color: chartreuse;
+  height: 26px;
+  font-size: 24px;
+  margin: 2.5px 2px 8px;
+  text-align: right;
+}
+
+.active{
   height: 40px;
-  margin: 10px 5px;
+  background-color: darkred;
+  margin: 2px;
+  font-size: 36px;
+  text-align: right;
 }
 
-.equal{
-  width: 154px;
+.buttons {
+  margin: 60px 10px;
+  height: 400px;
+}
+
+.row {
+  margin-top: 10px;
+}
+
+.btn {
+  background-color: #40bad5;
+  border-color: #120136;
+  width: 80px;
+  height: 50px;
+  border-radius: 10%;
+  margin: 2px;
+  border: 4px;
+  border-style: inset;
+  padding: 2px;
+  font-size: 125%;
+  font-weight: bold;
+}
+
+.divide {
+  font-size: 150%;
+}
+
+
+::placeholder {
+  opacity: 1;
+  color: #120136;
 }
