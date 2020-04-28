@@ -25,17 +25,17 @@ body {
   border-style: outset;
 }
 
-.history{
-  background-color: chartreuse;
+.history {
+  /* background-color: chartreuse; */
   height: 26px;
   font-size: 24px;
   margin: 2.5px 2px 8px;
   text-align: right;
 }
 
-.active{
+.active {
   height: 40px;
-  background-color: darkred;
+  /* background-color: darkred; */
   margin: 2px;
   font-size: 36px;
   text-align: right;

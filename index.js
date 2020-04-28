@@ -3,28 +3,21 @@ var operators = [];
 var num = "";
 var text = "";
 
-// var conv = {'one': '1','two': '2','three': '3','four': '4','five': '5','six': '6','seven': '7','eight': '8','nine': '9'};
-
 $("button").click(function () {
-    text = text + this.classList[1];
-    $(".active").text(text);
-    if (this.classList[2] !== "op") {
-        num += this.classList[1];
+    cacl(this.classList[1], this.classList[2]);
+});
+
+$(document).on('keydown', function (eve) {
+    var key;
+    if (eve.key === 'Enter') {
+        key = '=';
+    } else if (eve.key === 'Delete') {
+        key = 'C';
     } else {
-        numbers.push(Number(num));
-        operators.push(this.classList[1]);
-        num = "";
+        key = eve.key;
     }
-    if (this.classList[1] === 'equal') {
-        var result = results();
-        $(".history").text(String(numbers[0]) + " " + operators[0] + " " + String(numbers[1]) + " =");
-        $(".active").text("");
-        $(".active").text(result);
-        text = String(result);
-        num = String(result)
-        numbers.length = 0;
-        operators.length = 0;
-    }
+    var list = $('button:contains(' + key + ')')[0].classList;
+    cacl(list[1], list[2]);
 })
 
 function results() {
@@ -53,4 +46,34 @@ function results() {
 
     }
     return result;
+}
+
+function cacl(class1, class2) {
+    text = text + class1;
+    $(".active").text(text);
+    if (class2 !== "op") {
+        num += class1;
+    } else {
+        numbers.push(Number(num));
+        operators.push(class1);
+        num = "";
+    }
+    if (class1 === 'equal') {
+        var result = results();
+        $(".history").text(String(numbers[0]) + " " + operators[0] + " " + String(numbers[1]) + " =");
+        $(".active").text("");
+        $(".active").text(result);
+        text = String(result);
+        num = String(result)
+        numbers.length = 0;
+        operators.length = 0;
+    }
+    if (class1 == 'del') {
+        numbers.length = 0;
+        operators.length = 0;
+        $(".history").text("");
+        $(".active").text("");
+        num = "";
+        text = "";
+    }
 }
